@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to the Library System</h1>
+    {% if not current_user.is_authenticated %}
+        <p>Please login to access the library features.</p>
+    {% else %}
+        <p>Browse our collection of books.</p>
+    {% endif %}
+{% endblock %}
